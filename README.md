@@ -1,29 +1,39 @@
 # brand-strategy-research
 
-An agent skill for generating deep brand development history and strategic analysis reports (深度品牌调研与品牌战略分析报告).
+品牌深度调研与战略分析报告生成技能。以一个目标品牌为输入，产出结构化的品牌发展史与战略分析报告。
 
-## What it does
+## 功能
 
-Given a target brand, the skill guides an AI agent to:
+给定一个目标品牌，引导 AI 完成：
 
-1. Research the brand's founding story, funding history, product launches, marketing campaigns, leadership changes, crisis events, and competitive landscape.
-2. Cross-verify brand stages against concrete business milestones.
-3. Produce a structured 7-section strategic report:
-   - Core Brand Identity & Summary (≤200 words)
-   - Brand DNA & Founding Philosophy
-   - Brand Evolution: Milestone Analysis (3-5 phases, table)
-   - Product Line Brand Strategy Matrix (table)
-   - Brand Communication System
-   - Brand Competitive Landscape & Perception Gap
-   - Conclusion: Brand Moat & Outlook
+1. **信息检索**：调研品牌创立故事、融资历史、产品发布、营销战役、管理层变动、危机事件与竞争格局。优先采信官方发布、权威营销媒体（广告门、数英网等）、行业报告与社媒监测。
+2. **交叉验证**：把每个品牌阶段与同期业务里程碑（产品发布、市场扩张、融资、并购）对照，验证战略意图。
+3. **产出结构化报告**（七大章节）：
+   - 核心品牌摘要（≤200 字）
+   - 品牌基因与创始理念
+   - 品牌进化史：里程碑分析（3–5 个阶段，表格呈现）
+   - 产品线品牌战略矩阵（3–4 条产品线，表格呈现）
+   - 品牌沟通体系（视觉识别、语境语调、内容与渠道策略）
+   - 品牌竞争格局与认知差异
+   - 结论：品牌护城河与未来展望
 
-## Files
+## 输出标准
 
-- `SKILL.md` — skill definition, workflow, output standards
-- `references/report-template.md` — full 7-section report template with table formats
+- **语调**：INTJ 风格——专业、锐利、无废话
+- **格式**：阶段对比、产品线矩阵、竞争格局均用表格
+- **叙事深度**：不只罗列 campaign，要分析背后的战略意图、演变逻辑与结果
+- **近期优先**：最近两年的内容必须最详细，含具体战役名称、创意亮点与业务影响
 
-## Usage
+## 目录结构
 
-Deploy as a skill in any agent environment that supports SKILL.md-style skills (e.g. Claude Skills, Kimi skills), or paste `SKILL.md` + the template into a system prompt. Trigger with requests like "品牌调研", "品牌分析", "brand strategy research".
+```
+SKILL.md                        技能定义、工作流、输出标准
+references/
+  report-template.md            完整七章报告模板（含表格格式）
+```
 
-All brand examples in the template are generic illustrative placeholders — no real client data included.
+## 使用方式
+
+部署到任何支持 SKILL.md 式技能的 Agent 环境（如 Claude Skills、Kimi 技能），或把 `SKILL.md` 与模板直接粘贴进系统提示词。用「品牌调研」「品牌分析」「品牌战略」「竞品品牌分析」「brand strategy research」等表述触发。
+
+模板中的品牌示例均为通用占位示例，不含任何真实客户数据。
